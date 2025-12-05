@@ -17,11 +17,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
+      - name: Install dependencies (force)
         uses: bahmutov/npm-install@v1
-
-      - name: Force-install specific package
-        run: npm install @react-midi/hooks@^2.0.1 --force
+        env:
+          INSTALL_COMMAND: npm install --force
 
       - name: Build project
         run: npm run build
