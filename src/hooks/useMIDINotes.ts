@@ -39,8 +39,6 @@ function useMIDINotes(access: MIDIAccess | null) {
             }
         }else if(command == 0x80){
             note_off(note, channel);
-        }else{
-            console.log("unknown command", status)
         }
     }
 
