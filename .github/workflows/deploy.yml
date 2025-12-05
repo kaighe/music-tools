@@ -17,11 +17,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      # - name: Install dependencies
-      #   uses: bahmutov/npm-install@v1
-
-      - name: Install dependencies (force)
-        run: npm install --force
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: npm run build
